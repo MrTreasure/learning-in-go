@@ -16,15 +16,15 @@ func main() {
 		insts = append(insts, one)
 	}
 
-	var banlancer balance.Balancer
+	var balancer balance.Balancer
 	var conf = os.Args[1]
 
 	if conf == "random" {
-		banlancer = &balance.RandomBalance{}
+		balancer = &balance.RandomBalance{}
 	} else if conf == "roundrobin" {
-		banlancer = &balance.RoundRobinBalance{}
+		balancer = &balance.RoundRobinBalance{}
 	} else {
-		banlancer = &balance.RandomBalance{}
+		balancer = &balance.RandomBalance{}
 	}
 
 	for {
