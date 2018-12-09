@@ -9,15 +9,21 @@ func main() {
 	intChan := make(chan int, 1000)
 	resultChan := make(chan int, 1000)
 
-	for i := 0; i < 100000; i++ {
+	for i := 0; i < 1000; i++ {
 		intChan <- i
 	}
+
+	close(intChan)
 
 	for i := 0; i < 12; i++ {
 		// chan 是线程安全的管道，不会出现重复取数
 		go calc(intChan, resultChan)
 	}
-
+	go (func() {
+		for v := range resultChan {
+			fmt.Println(v)
+		}
+	})()
 	time.Sleep(time.Second * 10)
 }
 
