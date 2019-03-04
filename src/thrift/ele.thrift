@@ -1,4 +1,4 @@
-namespace go ele.demo
+namespace go ele
 
 struct Student{
   1: i32 id,
