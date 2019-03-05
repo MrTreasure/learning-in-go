@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Treasure",
+    "duty": "前端工程师",
+    "department":"大数据组"
+  },
+  {
+    "id": 2,
+    "name": "旭生",
+    "duty": "前端工程师",
+    "department": "大数据组"
+  },
+  {
+    "id": 3,
+    "name": "胜飞",
+    "duty": "前端工程师",
+    "department": "大数据组"
+  },
+  {
+    "id": 4,
+    "name": "羊毛老师",
+    "duty": "后端工程师",
+    "department": "大网关组"
+  },
+  {
+    "id": 5,
+    "name": "+老师",
+    "duty": "后端工程师",
+    "department": "大网关组"
+  },
+  {
+    "id": 6,
+    "name": "嘿嘿",
+    "duty": "后端工程师",
+    "department": "监控组"
+  },
+  {
+    "id": 7,
+    "name": "粽叔叔",
+    "duty": "架构师",
+    "department": "大前端"
+  },
+  {
+    "id": 8,
+    "name": "一哥",
+    "duty": "技术专家",
+    "department": "大网关组"
+  }
+]

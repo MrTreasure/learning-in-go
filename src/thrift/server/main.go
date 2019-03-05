@@ -28,10 +28,16 @@ func main() {
 	processor := ele.NewEleThriftProcessor(handler)
 
 	server := thrift.NewTSimpleServer4(processor, serverTransport, transportFactory, protocolFactory)
+	// 卡死在这一步了
+	err = server.Serve()
+	fmt.Println("go here")
+	if err != nil {
+		fmt.Fprintln(os.Stderr, "Error opening server, err: ", err)
+		os.Exit(1)
+	}
 
 	fmt.Println("thrift server in", NetworkAddr)
 
-	server.Serve()
 }
 
 type eleThrift struct {
